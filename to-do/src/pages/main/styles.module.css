@@ -1,2 +1,22 @@
 .main {
+  width: 100vw;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #97affd 0%, #55dbec 50%, #4eaefc 100%);
+}
+.container {
+  width: 30vw;
+  min-width: 300px;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 15px;
 }
