@@ -1,12 +1,19 @@
 import styles from "./styles.module.css";
 import { Task } from "../../entities/task";
-export const List = () => {
+export const List = ({ tasks, setTasks }) => {
   return (
     <ul className={styles.list}>
-      <Task name="Task 1" />
-      <Task name="Task 2" />
-      <Task name="Task 3" />
-      <Task name="Task 4" />
+      {tasks.map((task, index) => {
+        return (
+          <Task
+            name={task.name}
+            key={index}
+            setTasks={setTasks}
+            tasks={tasks}
+            index={index}
+          />
+        );
+      })}
     </ul>
   );
 };

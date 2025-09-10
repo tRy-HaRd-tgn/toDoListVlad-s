@@ -1,12 +1,14 @@
 import styles from "./styles.module.css";
 import { Header, Footer, List } from "../../widgets";
+import { useState } from "react";
 export const Main = () => {
+  const [tasks, setTasks] = useState([]);
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <Header />
-        <List />
-        <Footer tasks={[1, 2, 3, 4]} />
+        <Header tasks={tasks} setTasks={setTasks} />
+        <List tasks={tasks} setTasks={setTasks} />
+        <Footer tasks={tasks} setTasks={setTasks} />
       </div>
     </main>
   );
