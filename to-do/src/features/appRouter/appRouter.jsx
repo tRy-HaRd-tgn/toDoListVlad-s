@@ -3,14 +3,14 @@ import { publickRoutes } from "./routes";
 export const AppRouter = () => {
   return (
     <Routes>
-      {publickRoutes.map((route, index) => {
+      {publickRoutes.map((route, index) => (
         <Route
           key={index}
           element={route.component}
           path={route.path}
           exact={route.exact}
-        />;
-      })}
+        />
+      ))}
     </Routes>
   );
 };
