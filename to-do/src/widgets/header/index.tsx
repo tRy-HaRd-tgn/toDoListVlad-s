@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { MyInput, MyButton } from "../../shared";
+import { MyInput, MyButton } from "@/shared";
 import { useState } from "react";
 export function Header({ tasks, setTasks }: any) {
   const [taskName, setTaskName] = useState("");

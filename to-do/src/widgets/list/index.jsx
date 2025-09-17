@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { Task } from "../../entities/task";
+import { Task } from "@/entities";
 export function List({ tasks, setTasks }) {
   return (
     <ul className={styles.list}>

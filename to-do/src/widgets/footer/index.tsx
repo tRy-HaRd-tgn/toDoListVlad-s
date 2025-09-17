@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { MyButton } from "../../shared";
+import { MyButton } from "@/shared";
 export function Footer({ tasks, setTasks }: any) {
   return (
     <footer className={styles.footer}>
