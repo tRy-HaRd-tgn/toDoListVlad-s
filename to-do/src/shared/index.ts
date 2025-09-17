@@ -1,3 +1,1 @@
-export { MyInput } from "./input";
-export { MyButton } from "./button";
-export { Task } from "./task";
+export { MyInput, MyButton, Task } from "./ui";
