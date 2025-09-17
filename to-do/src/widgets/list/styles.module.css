@@ -1,10 +1,94 @@
 .list {
   width: 100%;
-  height: 75%;
+  flex: 1;
   display: flex;
   flex-direction: column;
-
-  gap: 10px;
+  gap: 0;
   overflow-y: auto;
   padding: 20px;
+  position: relative;
+  min-height: 200px;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+  flex: 1;
+  min-height: 200px;
+}
+
+.emptyIcon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #667eea;
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.emptyDescription {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.5;
+  max-width: 250px;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.taskItem {
+  animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
