@@ -1,1 +1,1 @@
-export { MyInput, MyButton, Task } from "./ui";
+export { MyInput, MyButton, Task } from './ui';

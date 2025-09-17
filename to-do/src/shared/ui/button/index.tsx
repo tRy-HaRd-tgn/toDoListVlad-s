@@ -1,4 +1,4 @@
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 export function MyButton({ children, props, onClick }: any) {
   return (
     <button className={styles.button} {...props} onClick={onClick}>

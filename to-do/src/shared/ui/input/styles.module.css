@@ -11,7 +11,8 @@
   font-weight: 500;
   color: #333;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05),
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   position: relative;
 }
@@ -26,14 +27,18 @@
   outline: none;
   border-color: #667eea;
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2), 0 2px 8px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow:
+    0 4px 16px rgba(102, 126, 234, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 0 0 3px rgba(102, 126, 234, 0.1);
   transform: translateY(-1px);
 }
 
 .input:hover {
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08),
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 

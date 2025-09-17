@@ -1,8 +1,10 @@
-import styles from "./styles.module.css";
-import { MyInput, MyButton } from "@/shared";
-import { useState } from "react";
+import { useState } from 'react';
+
+import styles from './styles.module.css';
+
+import { MyInput, MyButton } from '@/shared';
 export function Header({ tasks, setTasks }: any) {
-  const [taskName, setTaskName] = useState("");
+  const [taskName, setTaskName] = useState('');
   return (
     <header className={styles.header}>
       <p className={styles.p}>Todo App</p>
@@ -14,7 +16,7 @@ export function Header({ tasks, setTasks }: any) {
         <MyButton
           onClick={() => {
             setTasks([...tasks, { name: taskName }]);
-            setTaskName("");
+            setTaskName('');
           }}
         >
           +

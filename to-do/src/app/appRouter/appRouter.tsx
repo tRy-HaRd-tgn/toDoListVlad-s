@@ -1,5 +1,6 @@
-import { Route, Routes } from "react-router-dom";
-import { publickRoutes } from "./routes";
+import { Route, Routes } from 'react-router-dom';
+
+import { publickRoutes } from './routes';
 export function AppRouter() {
   return (
     <Routes>

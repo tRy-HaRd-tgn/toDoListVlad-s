@@ -1,6 +1,8 @@
-import styles from "./styles.module.css";
-import { MyButton } from "@/shared";
-import { Trash } from "lucide-react";
+import { Trash } from 'lucide-react';
+
+import styles from './styles.module.css';
+
+import { MyButton } from '@/shared';
 export function Task({ name, props, setTasks, tasks, index }: any) {
   return (
     <li className={styles.task} {...props}>
