@@ -1,9 +1,9 @@
 import styles from "./styles.module.css";
 import { Task } from "@/entities";
-export function List({ tasks, setTasks }) {
+export function List({ tasks, setTasks }: any) {
   return (
     <ul className={styles.list}>
-      {tasks.map((task, index) => {
+      {tasks.map((task: any, index: any) => {
         return (
           <Task
             name={task.name}

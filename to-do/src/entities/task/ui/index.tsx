@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { MyButton } from "../../../shared/button";
+import { MyButton } from "@/shared";
 import { Trash } from "lucide-react";
 export function Task({ name, props, setTasks, tasks, index }: any) {
   return (

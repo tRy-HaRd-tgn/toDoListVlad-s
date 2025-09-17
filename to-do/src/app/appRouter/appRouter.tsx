@@ -4,12 +4,7 @@ export function AppRouter() {
   return (
     <Routes>
       {publickRoutes.map((route, index) => (
-        <Route
-          key={index}
-          element={route.component}
-          path={route.path}
-          exact={route.exact}
-        />
+        <Route key={index} element={route.component} path={route.path} />
       ))}
     </Routes>
   );
