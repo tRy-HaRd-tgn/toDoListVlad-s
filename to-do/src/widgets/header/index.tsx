@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import { MyInput, MyButton } from "../../shared";
 import { useState } from "react";
-export const Header = ({ tasks, setTasks }) => {
+export const Header = ({ tasks, setTasks }: any) => {
   const [taskName, setTaskName] = useState("");
   return (
     <header className={styles.header}>
@@ -9,7 +9,7 @@ export const Header = ({ tasks, setTasks }) => {
       <div className={styles.container}>
         <MyInput
           value={taskName}
-          onChange={(e) => setTaskName(e.target.value)}
+          onChange={(e: any) => setTaskName(e.target.value)}
         />
         <MyButton
           onClick={() => {

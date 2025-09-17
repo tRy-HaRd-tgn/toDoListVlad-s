@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import { MyButton } from "../../shared";
-export const Footer = ({ tasks, setTasks }) => {
+export const Footer = ({ tasks, setTasks }: any) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
