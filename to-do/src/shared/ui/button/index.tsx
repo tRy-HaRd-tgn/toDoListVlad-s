@@ -1,8 +1,16 @@
+import React, { FC } from 'react';
+
 import styles from './styles.module.css';
-export function MyButton({ children, props, onClick }: any) {
+
+interface MyButtonProps {
+  children: React.ReactNode;
+
+  onClick: () => void;
+}
+export const MyButton: FC<MyButtonProps> = ({ children, onClick }) => {
   return (
-    <button className={styles.button} {...props} onClick={onClick}>
+    <button className={styles.button} onClick={onClick}>
       <span>{children}</span>
     </button>
   );
-}
+};

@@ -1,4 +1,12 @@
+import { FC } from 'react';
+
 import styles from './styles.module.css';
-export function MyInput({ value, onChange }: any) {
-  return <input className={styles.input} value={value} onChange={onChange} />;
+
+interface MyInputProps {
+  value: string;
+  onChange: (e: any) => void;
 }
+
+export const MyInput: FC<MyInputProps> = ({ value, onChange }) => {
+  return <input className={styles.input} value={value} onChange={onChange} />;
+};

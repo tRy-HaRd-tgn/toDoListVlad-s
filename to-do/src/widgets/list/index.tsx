@@ -1,7 +1,14 @@
+import { FC } from 'react';
+
 import styles from './styles.module.css';
 
+interface ListProps {
+  tasks: any;
+  setTasks: (tasks: any) => void;
+}
+
 import { Task } from '@/entities';
-export function List({ tasks, setTasks }: any) {
+export const List: FC<ListProps> = ({ tasks, setTasks }) => {
   return (
     <ul className={styles.list}>
       {tasks.map((task: any, index: any) => {
@@ -17,4 +24,4 @@ export function List({ tasks, setTasks }: any) {
       })}
     </ul>
   );
-}
+};

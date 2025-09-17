@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import { useState } from 'react';
 
 import styles from './styles.module.css';
 
 import { Header, Footer, List } from '@/widgets';
-export function Main() {
+export const Main: FC = () => {
   const [tasks, setTasks] = useState([]);
   return (
     <main className={styles.main}>
@@ -14,4 +15,4 @@ export function Main() {
       </div>
     </main>
   );
-}
+};

@@ -1,7 +1,14 @@
+import { FC } from 'react';
+
 import styles from './styles.module.css';
 
+interface FooterProps {
+  tasks: any;
+  setTasks: (tasks: any) => void;
+}
+
 import { MyButton } from '@/shared';
-export function Footer({ tasks, setTasks }: any) {
+export const Footer: FC<FooterProps> = ({ tasks, setTasks }) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -10,4 +17,4 @@ export function Footer({ tasks, setTasks }: any) {
       </div>
     </footer>
   );
-}
+};

@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
 import styles from './styles.module.css';
 
+interface HeaderProps {
+  tasks: any;
+  setTasks: (tasks: any) => void;
+}
+
 import { MyInput, MyButton } from '@/shared';
-export function Header({ tasks, setTasks }: any) {
+export const Header: FC<HeaderProps> = ({ tasks, setTasks }) => {
   const [taskName, setTaskName] = useState('');
   return (
     <header className={styles.header}>
@@ -24,4 +29,4 @@ export function Header({ tasks, setTasks }: any) {
       </div>
     </header>
   );
-}
+};
