@@ -16,12 +16,14 @@ export const Header: FC<HeaderProps> = ({ tasks, setTasks }) => {
       <div className={styles.container}>
         <MyInput
           value={taskName}
-          onChange={(e: any) => setTaskName(e.target.value)}
+          onChange={(e: any) => setTaskName(e.target?.value)}
         />
         <MyButton
           onClick={() => {
-            setTasks([...tasks, { name: taskName }]);
-            setTaskName('');
+            if (taskName.trim()) {
+              setTasks([...tasks, { name: taskName.trim() }]);
+              setTaskName('');
+            }
           }}
         >
           +
