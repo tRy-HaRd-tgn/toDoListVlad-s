@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import { Header, Footer, List } from "../../widgets";
 import { useState } from "react";
-export const Main = () => {
+export function Main() {
   const [tasks, setTasks] = useState([]);
   return (
     <main className={styles.main}>
@@ -12,4 +12,4 @@ export const Main = () => {
       </div>
     </main>
   );
-};
+}

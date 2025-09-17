@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import { MyButton } from "../../shared";
-export const Footer = ({ tasks, setTasks }: any) => {
+export function Footer({ tasks, setTasks }: any) {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -9,4 +9,4 @@ export const Footer = ({ tasks, setTasks }: any) => {
       </div>
     </footer>
   );
-};
+}

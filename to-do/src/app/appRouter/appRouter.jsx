@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { publickRoutes } from "./routes";
-export const AppRouter = () => {
+export function AppRouter() {
   return (
     <Routes>
       {publickRoutes.map((route, index) => (
@@ -13,4 +13,4 @@ export const AppRouter = () => {
       ))}
     </Routes>
   );
-};
+}

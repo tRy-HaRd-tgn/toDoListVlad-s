@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import { MyInput, MyButton } from "../../shared";
 import { useState } from "react";
-export const Header = ({ tasks, setTasks }: any) => {
+export function Header({ tasks, setTasks }: any) {
   const [taskName, setTaskName] = useState("");
   return (
     <header className={styles.header}>
@@ -22,4 +22,4 @@ export const Header = ({ tasks, setTasks }: any) => {
       </div>
     </header>
   );
-};
+}

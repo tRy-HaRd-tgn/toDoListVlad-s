@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import { Task } from "../../entities/task";
-export const List = ({ tasks, setTasks }) => {
+export function List({ tasks, setTasks }) {
   return (
     <ul className={styles.list}>
       {tasks.map((task, index) => {
@@ -16,4 +16,4 @@ export const List = ({ tasks, setTasks }) => {
       })}
     </ul>
   );
-};
+}
