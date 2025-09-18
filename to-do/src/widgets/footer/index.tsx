@@ -2,18 +2,14 @@ import { FC } from 'react';
 
 import styles from './styles.module.css';
 
-interface FooterProps {
-  tasks: any;
-  setTasks: (tasks: any) => void;
-}
-
-import { MyButton } from '@/shared';
-export const Footer: FC<FooterProps> = ({ tasks, setTasks }) => {
+import { MyButton, useStore } from '@/shared';
+export const Footer: FC = () => {
+  const { list, reset } = useStore();
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p className={styles.p}>You have {tasks?.length} pending tasks</p>
-        <MyButton onClick={() => setTasks([])}>Clear all</MyButton>
+        <p className={styles.p}>You have {list?.length} pending tasks</p>
+        <MyButton onClick={() => reset()}>Clear all</MyButton>
       </div>
     </footer>
   );

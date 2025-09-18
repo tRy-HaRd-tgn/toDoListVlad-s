@@ -5,20 +5,16 @@ import styles from './styles.module.css';
 
 interface TaskProps {
   name: string;
-  setTasks: (tasks: any) => void;
-  tasks: any;
   index: any;
 }
 import { MyButton } from '@/shared';
-export const Task: FC<TaskProps> = ({ name, setTasks, tasks, index }) => {
+import { useStore } from '@/shared';
+export const Task: FC<TaskProps> = ({ name }) => {
+  const { removeItem } = useStore();
   return (
     <li className={styles.task}>
       <h1 className={styles.name}>{name}</h1>
-      <MyButton
-        onClick={() =>
-          setTasks((tasks = tasks.filter((task: any, i: any) => i !== index)))
-        }
-      >
+      <MyButton onClick={() => removeItem(name)}>
         <Trash />
       </MyButton>
     </li>
