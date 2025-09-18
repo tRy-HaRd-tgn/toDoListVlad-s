@@ -1,16 +1,24 @@
 import { create } from 'zustand';
 
+interface Task {
+  id: string;
+  name: string;
+}
+
 interface Store {
-  list: string[];
-  addItem: (item: string) => void;
-  removeItem: (item: string) => void;
+  list: Task[];
+  addItem: (name: string) => void;
+  removeItem: (id: string) => void;
   reset: () => void;
 }
 
 export const useStore = create<Store>(set => ({
   list: [],
-  addItem: (item: string) => set(state => ({ list: [...state.list, item] })),
-  removeItem: (item: string) =>
-    set(state => ({ list: state.list.filter(i => i !== item) })),
+  addItem: (name: string) =>
+    set(state => ({
+      list: [...state.list, { id: Date.now().toString(), name }],
+    })),
+  removeItem: (id: string) =>
+    set(state => ({ list: state.list.filter(task => task.id !== id) })),
   reset: () => set({ list: [] }),
 }));

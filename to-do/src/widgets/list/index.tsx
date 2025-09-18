@@ -8,8 +8,8 @@ export const List: FC = () => {
   const { list } = useStore();
   return (
     <ul className={styles.list}>
-      {list.map((task: any, index: any) => {
-        return <Task name={task} key={index} index={index} />;
+      {list.map(task => {
+        return <Task id={task.id} name={task.name} key={task.id} />;
       })}
     </ul>
   );
