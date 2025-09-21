@@ -12,7 +12,7 @@ interface Store {
   reset: () => void;
 }
 
-export const useStore = create<Store>(set => ({
+export const useStore = create<Store>()(set => ({
   list: [],
   addItem: (name: string) =>
     set(state => ({

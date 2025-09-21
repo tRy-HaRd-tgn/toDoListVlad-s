@@ -13,6 +13,7 @@ export const Header: FC = () => {
         <MyInput
           value={taskName}
           onChange={(e: any) => setTaskName(e.target?.value)}
+          placeholder={'Add your new todo'}
         />
         <MyButton
           onClick={() => {
