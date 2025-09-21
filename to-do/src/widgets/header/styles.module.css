@@ -3,7 +3,7 @@
   min-height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   justify-content: center;
   padding: 30px 20px 20px;
   background: linear-gradient(
@@ -52,4 +52,10 @@
   gap: 12px;
   min-height: 50px;
   position: relative;
+}
+.p {
+  display: flex;
+  justify-content: left;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
