@@ -1,10 +1,19 @@
 import { fileURLToPath, URL } from 'node:url';
 
 import react from '@vitejs/plugin-react';
+import wyw from '@wyw-in-js/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    wyw({
+      include: ['**/*.{ts,tsx}'],
+      babelOptions: {
+        presets: ['@babel/preset-typescript', '@babel/preset-react'],
+      },
+    }),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -15,6 +24,13 @@ export default defineConfig({
       '@shared': fileURLToPath(new URL('./src/shared', import.meta.url)),
       '@pages': fileURLToPath(new URL('./src/pages', import.meta.url)),
     },
+  },
+  build: {
+    target: 'esnext',
+    cssCodeSplit: false,
+  },
+  define: {
+    global: 'globalThis',
   },
   test: {
     environment: 'jsdom',

@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 
 import styles from './styles.module.css';
 
-import { MyInput, MyButton, useStore } from '@/shared';
+import { Input, Button, useStore } from '@/shared';
 export const Header: FC = () => {
   const [taskName, setTaskName] = useState('');
   const { addItem } = useStore();
@@ -10,12 +10,12 @@ export const Header: FC = () => {
     <header className={styles.header}>
       <p className={styles.p}>Todo App</p>
       <div className={styles.container}>
-        <MyInput
+        <Input
           value={taskName}
           onChange={(e: any) => setTaskName(e.target?.value)}
           placeholder={'Add your new todo'}
         />
-        <MyButton
+        <Button
           onClick={() => {
             if (taskName.trim()) {
               addItem(taskName.trim());
@@ -24,7 +24,7 @@ export const Header: FC = () => {
           }}
         >
           +
-        </MyButton>
+        </Button>
       </div>
     </header>
   );

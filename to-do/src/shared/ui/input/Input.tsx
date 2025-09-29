@@ -2,13 +2,13 @@ import { FC } from 'react';
 
 import styles from './styles.module.css';
 
-interface MyInputProps {
+interface InputProps {
   value: string;
   onChange: (e: any) => void;
   placeholder: string;
 }
 
-export const MyInput: FC<MyInputProps> = ({ value, onChange, placeholder }) => {
+export const Input: FC<InputProps> = ({ value, onChange, placeholder }) => {
   return (
     <input
       placeholder={placeholder}

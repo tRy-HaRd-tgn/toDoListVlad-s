@@ -3,21 +3,21 @@ import React, { FC } from 'react';
 
 import styles from './styles.module.css';
 
+import { Task as TaskShared, useStore, Button } from '@/shared';
+
 export interface TaskProps {
   id: string;
   name: string;
 }
-
-import { useStore, MyButton } from '@/shared';
 export const Task: FC<TaskProps> = ({ id, name }) => {
   const { removeItem } = useStore();
   return (
-    <li className={styles.task}>
+    <TaskShared testId={id}>
       <h1 className={styles.name}>{name}</h1>
-      <MyButton onClick={() => removeItem(id)}>
+      <Button onClick={() => removeItem(id)}>
         <Trash />
-      </MyButton>
-    </li>
+      </Button>
+    </TaskShared>
   );
 };
 export default React.memo(Task);

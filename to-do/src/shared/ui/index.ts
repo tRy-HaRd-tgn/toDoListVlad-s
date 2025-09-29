@@ -1,3 +1,3 @@
-export { MyButton } from './button';
-export { MyInput } from './input';
-export { Task } from './task';
+export { Button } from './button/Button';
+export { Input } from './input/Input';
+export { Task } from './task/Task';
