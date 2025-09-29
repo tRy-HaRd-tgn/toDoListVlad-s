@@ -1,5 +1,5 @@
 import { Trash } from 'lucide-react';
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 import styles from './styles.module.css';
 
@@ -20,3 +20,4 @@ export const Task: FC<TaskProps> = ({ id, name }) => {
     </li>
   );
 };
+export default React.memo(Task);
