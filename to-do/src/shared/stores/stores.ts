@@ -8,7 +8,7 @@ interface Task {
 interface Store {
   list: Task[];
   addItem: (name: string) => void;
-  removeItem: (id: string) => void;
+  removeItem?: (id: string) => void;
   reset: () => void;
 }
 
