@@ -14,9 +14,13 @@ describe('useStore', () => {
     expect(useStore.getState().list.length).toBe(2);
   });
 
-  it('removeItem', () => {
-    useStore.setState({ list: [{ id: mokData, name: mokData }] });
+  it('resetAllTasks', () => {
     useStore.getState().reset();
     expect(useStore.getState().list).toEqual([]);
+  });
+
+  it('removeItem', () => {
+    useStore.getState().removeItem(mokData);
+    expect(useStore.getState().list.length).toBe(0);
   });
 });
