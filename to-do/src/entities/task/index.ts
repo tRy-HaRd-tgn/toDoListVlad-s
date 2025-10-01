@@ -1,2 +1,2 @@
-export { Task } from './ui';
-export type { TaskProps } from './ui';
+export { Task } from './ui/Task';
+export type { TaskProps } from './ui/Task';
