@@ -9,8 +9,8 @@ export interface TaskProps {
   id: string;
   name: string;
 }
-export const Task: FC<TaskProps> = ({ id, name }) => {
-  const { removeItem } = useStore();
+export const Task: FC<TaskProps> = React.memo(({ id, name }) => {
+  const removeItem = useStore(store => store.removeItem);
   return (
     <TaskShared testId={id}>
       <h1 className={styles.name}>{name}</h1>
@@ -19,5 +19,4 @@ export const Task: FC<TaskProps> = ({ id, name }) => {
       </Button>
     </TaskShared>
   );
-};
-export default React.memo(Task);
+});
