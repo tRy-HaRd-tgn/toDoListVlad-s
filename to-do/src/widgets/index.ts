@@ -1,3 +1,3 @@
-export { Header } from './header';
-export { Footer } from './footer';
-export { List } from './list';
+export * from './header';
+export * from './footer';
+export * from './list';
